@@ -1,0 +1,33 @@
+ALGORITHM Sentence
+VAR
+  s : string[];
+  l : INTEGER;
+  nWords : INTEGER;
+  vowels : INTEGER;
+BEGIN
+WRITE ("write the string: ")
+READ (s);
+l = s.length;
+WRITE ("The length of the sentence is: ",l)
+nWords =1;
+vowels =0;
+
+FOR i FROM 1 TO s.length STEP 1  DO
+  IF (s[i]=" ") THEN
+    nWords = nWords+1
+  END_IF
+END_FOR
+
+WRITE ("The number of words in the sentence is: ",nWords);
+
+FOR i FROM 1 TO s.length STEP 1 DO
+
+IF (s[i] IN [a, e, i, o, u, y]) THEN
+  vowels = vowels +1 ;
+END_IF
+
+END_FOR
+
+WRITE("The number of vowels in the sentence is: ",vowels)
+
+END
